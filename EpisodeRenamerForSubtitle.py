@@ -19,11 +19,13 @@ for folder,x,files in os.walk(file_path):
 episodes.sort()
 subtitles.sort()
 
-print(episodes,"\n",subtitles)
+for episode,subtitle,video_format in zip(episodes,subtitles,video_formats):
+    print(f"{file_path + subtitle} ==> {file_path + episode[:-4] + '.srt'}")
+print("This is a preview\n")
 if input("Continue: (y/n) ?") == "y":
-    for episode,subtitle,format in zip(episodes,subtitles,video_formats):
-        print(file_path + episode,file_path + subtitle[:-4] + format)
-        os.rename(file_path + episode,file_path + subtitle[:-4] + format)
+    for episode,subtitle,video_format in zip(episodes,subtitles,video_formats):
+        print(file_path + subtitle,file_path + episode[:-4] + '.srt')
+        os.rename(file_path + subtitle,file_path + episode[:-4] + '.srt')
     print("Finished")
 input("Press any key to quit..")
 
