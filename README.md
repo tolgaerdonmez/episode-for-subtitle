@@ -1,5 +1,8 @@
 # episode-for-subtitle
 Episode-Subtitle Matcher
+
+[See the new version which is more secure, stable and has a GUI](https://github.com/tolgaerdonmez/video-subtitle-matcher)
+
 ### Use this on your own risk, your files can be overwrited while renaming. I hope that does not happen :)
 ### **Note:** Episodes and subtitles need to be in alpabethical order or in numerical
 
